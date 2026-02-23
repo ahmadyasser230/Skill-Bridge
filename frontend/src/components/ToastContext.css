@@ -1,0 +1,68 @@
+/* حاوية التنبيهات */
+.toast-container {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    /* بما أن الموقع عربي، البعض يفضلها يمين والبعض يسار */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+    direction: rtl;
+}
+
+/* التنبيه نفسه */
+.toast {
+    min-width: 300px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    border-right: 5px solid #cbd5e1;
+    /* حافة ملونة حسب النوع */
+    animation: slideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* أنواع التنبيهات */
+.toast-success {
+    border-right-color: #10b981;
+    /* أخضر */
+    background: rgba(209, 250, 229, 0.9);
+}
+
+.toast-error {
+    border-right-color: #ef4444;
+    /* أحمر */
+    background: rgba(254, 226, 226, 0.9);
+}
+
+.toast-info {
+    border-right-color: var(--primary-color, #0088cc);
+    /* أزرق الشعار */
+    background: rgba(224, 242, 254, 0.9);
+}
+
+.toast-warning {
+    border-right-color: #f59e0b;
+    /* برتقالي */
+    background: rgba(254, 243, 199, 0.9);
+}
+
+/* أنيميشن الظهور */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

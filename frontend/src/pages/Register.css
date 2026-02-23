@@ -1,0 +1,317 @@
+/* ======== Register.css — تصميم احترافي ======== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+.reg-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px 60px;
+    background: linear-gradient(145deg, #e8f0fe 0%, #f0f7ff 40%, #e3eeff 100%);
+    font-family: 'Cairo', sans-serif;
+}
+
+.reg-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px 52px;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow:
+        0 4px 6px rgba(13, 59, 102, 0.04),
+        0 20px 60px rgba(13, 59, 102, 0.10);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.reg-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0d3b66, #1a6eb5, #0d3b66);
+}
+
+.register-wide {
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.reg-header h1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #0d3b66;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+
+.reg-header p {
+    font-size: 15px;
+    color: #5a7a96;
+    margin: 0;
+}
+
+.reg-error-msg {
+    background: #fff0f0;
+    color: #c0392b;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    border-right: 4px solid #e74c3c;
+}
+
+.register-grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-section {
+    background: #f8fafd;
+    padding: 28px 28px 20px;
+    border-radius: 16px;
+    border: 1.5px solid #dde8f4;
+    box-sizing: border-box;
+    min-width: 0;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-section:hover {
+    border-color: #b8d0e8;
+    box-shadow: 0 4px 16px rgba(13, 59, 102, 0.06);
+}
+
+.form-section.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-section h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0d3b66;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1.5px solid #dde8f4;
+}
+
+.section-number {
+    background: linear-gradient(135deg, #0d3b66, #1a6eb5);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(13, 59, 102, 0.25);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #2c4a6e;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #cdd8e8;
+    font-size: 14px;
+    font-family: 'Cairo', sans-serif;
+    outline: none;
+    transition: all 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #1a2f45;
+}
+
+.form-group input::placeholder {
+    color: #a0b4c8;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0d3b66;
+    box-shadow: 0 0 0 3px rgba(13, 59, 102, 0.10);
+    background: #fafcff;
+}
+
+.field-hint {
+    font-size: 12px;
+    color: #7d99b5;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.form-footer {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+    padding-top: 28px;
+    border-top: 1.5px solid #e8eef5;
+}
+
+.btn-auth-submit {
+    background: linear-gradient(135deg, #0d3b66, #1a6eb5);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Cairo', sans-serif;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s;
+    width: 100%;
+    max-width: 340px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 18px rgba(13, 59, 102, 0.28);
+}
+
+.btn-auth-submit:hover {
+    background: linear-gradient(135deg, #0b2e55, #155ea3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(13, 59, 102, 0.35);
+}
+
+.btn-auth-submit:active {
+    transform: translateY(0);
+}
+
+.btn-auth-submit:disabled {
+    background: #9db3c8;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.form-footer p {
+    font-size: 14px;
+    color: #5a7a96;
+    margin: 0;
+    font-weight: 500;
+}
+
+.form-footer p a {
+    color: #0d3b66;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.form-footer p a:hover {
+    border-bottom-color: #0d3b66;
+}
+
+@media (max-width: 700px) {
+    .reg-container {
+        padding: 24px 16px 48px;
+    }
+
+    .reg-card {
+        padding: 32px 22px;
+        border-radius: 18px;
+    }
+
+    .register-grid-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section.full-width {
+        grid-column: 1;
+    }
+
+    .reg-header h1 {
+        font-size: 24px;
+    }
+}
+
+/* ======== شروط كلمة المرور ======== */
+.password-rules {
+    margin-top: 10px;
+    padding: 12px 14px;
+    background: #f4f8fd;
+    border-radius: 10px;
+    border: 1.5px solid #dde8f4;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.password-rule {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.25s;
+}
+
+.password-rule.passed {
+    color: #1a7a4a;
+}
+
+.password-rule.failed {
+    color: #c0392b;
+}
+
+.rule-icon {
+    font-size: 14px;
+    font-weight: 800;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.25s;
+}
+
+.password-rule.passed .rule-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.password-rule.failed .rule-icon {
+    background: #fee2e2;
+    color: #dc2626;
+}

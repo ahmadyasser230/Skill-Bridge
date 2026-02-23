@@ -1,0 +1,137 @@
+.welcome-wrapper {
+    direction: rtl;
+    background-color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    color: white;
+    padding: 120px 20px 0 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.brand-text {
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #fff;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin: 25px 0 40px;
+    opacity: 0.9;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Features */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 60px 0;
+}
+
+.feature-card {
+    padding: 40px;
+    border-radius: 20px;
+    background: #f8fafc;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: white;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #e2e8f0;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #6366f1;
+    margin-bottom: 20px;
+}
+
+/* Workflow Steps */
+.workflow-section {
+    background: #1e293b;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.workflow-steps {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.step-num {
+    width: 60px;
+    height: 60px;
+    background: #6366f1;
+    border-radius: 50%;
+    line-height: 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+    color: white;
+}
+
+.white-text {
+    color: white;
+}
+
+.step p {
+    color: #94a3b8;
+}
+
+.step h4 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Divider */
+@media (max-width: 768px) {
+    .workflow-steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .step-divider {
+        display: none;
+    }
+}
+
+/* Animations */
+@keyframes pop {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-pop {
+    animation: pop 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}

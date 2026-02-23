@@ -1,0 +1,232 @@
+.profile-container {
+    padding-bottom: 50px;
+}
+
+/* Header Card & Cover */
+.profile-header-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.profile-cover {
+    height: 160px;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}
+
+.profile-info-main {
+    padding: 0 40px 30px;
+    display: flex;
+    gap: 30px;
+    margin-top: -60px;
+    /* سحب الصورة للأعلى لتتداخل مع الغلاف */
+}
+
+/* Avatar Styling */
+.avatar-wrapper {
+    position: relative;
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 30px;
+    /* شكل مربع منحني عصري */
+    background-color: #f1f5f9;
+    background-size: cover;
+    background-position: center;
+    border: 6px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 800;
+    color: #6366f1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.edit-avatar-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #1e293b;
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Details Section */
+.user-details {
+    flex: 1;
+    padding-top: 70px;
+}
+
+.name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.university-tag {
+    color: #64748b;
+    margin: 8px 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stats-strip {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-item {
+    background: #f8fafc;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-gold {
+    color: #f59e0b;
+}
+
+/* Grid Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 25px;
+}
+
+.skill-badge {
+    background: #eef2ff;
+    color: #4338ca;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.project-item {
+    border-bottom: 1px solid #f1f5f9;
+    padding: 15px 0;
+}
+
+.project-item:last-child {
+    border: none;
+}
+
+.mini-progress {
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    margin: 8px 0;
+}
+
+.mini-progress .fill {
+    height: 100%;
+    background: #10b981;
+    border-radius: 10px;
+}
+
+/* Form Styling */
+.edit-form-card input,
+.edit-form-card textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-save {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-cancel {
+    background: #f1f5f9;
+    color: #64748b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-info-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .name-row {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* تأكد من إضافة z-index لزر الكاميرا ليكون دائماً في الأعلى */
+.avatar-wrapper {
+    position: relative;
+    z-index: 10;
+    /* يضمن بقاء الصورة والزر فوق أي تداخل */
+}
+
+.edit-avatar-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #1e293b;
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 20;
+    /* يجعله أعلى من الصورة نفسها */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.edit-avatar-btn:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+/* تعديل منطقة التفاصيل لمنع التداخل */
+.user-details {
+    flex: 1;
+    padding-top: 65px;
+    /* تقليل البادينج قليلاً */
+    position: relative;
+    z-index: 5;
+    /* أقل من منطقة الصورة */
+}

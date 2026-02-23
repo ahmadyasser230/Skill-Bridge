@@ -1,0 +1,287 @@
+/* ====== General ====== */
+.container {
+    padding-bottom: 50px;
+    background: linear-gradient(180deg, #f8fafc, #eef2ff);
+}
+
+.dashboard-title {
+    color: #0f172a;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+/* ====== Grid ====== */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* ====== Cards ====== */
+.card {
+    background: #0ea5e9;
+    border-radius: 18px;
+    padding: 24px;
+    border: 1px solid #0ea5e9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== User Profile Card ====== */
+.card user-profile-card {
+    background: linear-gradient(135deg,
+            #0ea5e9 0%,
+            #2563eb 50%,
+            #1e40af 100%);
+    color: #f8fafc;
+    border: none;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.6);
+}
+
+.user-profile-card::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    right: -15%;
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+.user-profile-card h2 {
+    color: #000000;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.user-profile-card span {
+    color: #48b6ff;
+    font-weight: 500;
+}
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+    opacity: 100%;
+    color: #1e40af;
+}
+
+.user-points {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 16px;
+    border-radius: 50%;
+    padding: 18px;
+    text-align: center;
+}
+
+.user-points svg {
+    color: #fbbf24;
+    font-size: 28px;
+}
+
+.points-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.points-label {
+    font-size: 0.7rem;
+}
+
+/* ====== Skills ====== */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: #eef2ff;
+    color: #4338ca;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid #c7d2fe;
+}
+
+/* .skill-tag {
+    background: rgba(255, 255, 255, 0.15);
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+} */
+
+/* ====== Quick Actions ====== */
+.quick-action {
+    color: white;
+    text-decoration: none;
+}
+
+.quick-action svg {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.quick-action.green {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.quick-action.orange {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.quick-action p {
+    opacity: 0.9;
+}
+
+/* ====== Section Header ====== */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ====== Forms ====== */
+.project-form {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    font-family: inherit;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+/* ====== Projects ====== */
+.projects-list {
+    display: grid;
+    gap: 14px;
+}
+
+.project-item {
+    background: #f9fafb;
+    padding: 16px;
+    border-radius: 12px;
+    border-right: 4px solid transparent;
+    transition: 0.25s;
+}
+
+.project-item:hover {
+    border-right-color: #4f46e5;
+    background: #f5f7ff;
+}
+
+.project-item h4 {
+    margin-bottom: 6px;
+}
+
+.project-item p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.project-item a {
+    color: #4f46e5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ====== Courses ====== */
+.course-card {
+    background: #f9fafb;
+    padding: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.25s;
+}
+
+.course-card:hover {
+    background: #eef2ff;
+}
+
+.course-card h4 {
+    margin-bottom: 10px;
+}
+
+/* ====== Progress ====== */
+.progress-bar {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0 6px;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #10b981, #34d399);
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+/* ====== Revenue ====== */
+.revenue {
+    color: #10b981;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ====== Empty ====== */
+.empty-text {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+    .user-header {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
+.card {
+    margin-bottom: 28px;
+}
+
+/* مسافة إضافية للأقسام الكبيرة */
+.grid-2 {
+    margin-top: 24px;
+}
+
+/* فصل الهيدر عن المحتوى */
+.user-profile-card {
+    margin-bottom: 36px;
+}

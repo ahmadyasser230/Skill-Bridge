@@ -1,0 +1,307 @@
+/* ======== VerifyEmail.css ======== */
+
+.verify-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #e8f0fe 0%, #f0f7ff 50%, #e3eeff 100%);
+    padding: 24px 16px;
+    font-family: 'Cairo', 'Segoe UI', sans-serif;
+}
+
+.verify-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px 44px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow:
+        0 4px 6px rgba(13, 59, 102, 0.04),
+        0 20px 60px rgba(13, 59, 102, 0.10);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.verify-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0d3b66, #1a6eb5, #0d3b66);
+}
+
+/* أيقونة الإيميل */
+.verify-icon {
+    margin: 0 auto 24px;
+    width: 80px;
+    height: 80px;
+}
+
+.verify-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* العنوان */
+.verify-card h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0d3b66;
+    margin: 0 0 10px;
+}
+
+.verify-subtitle {
+    font-size: 14px;
+    color: #5a7a96;
+    line-height: 1.7;
+    margin: 0 0 32px;
+}
+
+.verify-subtitle strong {
+    color: #0d3b66;
+    font-weight: 700;
+}
+
+/* خانات الكود */
+.code-inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 24px;
+    direction: ltr;
+}
+
+.code-box {
+    width: 52px;
+    height: 60px;
+    border: 2px solid #cdd8e8;
+    border-radius: 12px;
+    font-size: 26px;
+    font-weight: 800;
+    text-align: center;
+    color: #0d3b66;
+    outline: none;
+    transition: all 0.2s;
+    background: #f8fafd;
+    caret-color: #1a6eb5;
+}
+
+.code-box:focus {
+    border-color: #1a6eb5;
+    background: #f0f7ff;
+    box-shadow: 0 0 0 3px rgba(26, 110, 181, 0.12);
+    transform: translateY(-2px);
+}
+
+.code-box.filled {
+    border-color: #0d3b66;
+    background: #e8f4ff;
+}
+
+.code-box.error {
+    border-color: #e74c3c;
+    background: #fff5f5;
+    animation: shake 0.35s ease;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    75% {
+        transform: translateX(4px);
+    }
+}
+
+/* رسائل الخطأ والنجاح */
+.verify-error {
+    background: #fff0f0;
+    color: #c0392b;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    border-right: 4px solid #e74c3c;
+    text-align: right;
+}
+
+.verify-success {
+    background: #f0fff4;
+    color: #1a7a4a;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    border-right: 4px solid #27ae60;
+    text-align: right;
+}
+
+/* زر التفعيل */
+.verify-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #0d3b66, #1a6eb5);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Cairo', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s;
+    box-shadow: 0 4px 18px rgba(13, 59, 102, 0.28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+}
+
+.verify-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #0b2e55, #155ea3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(13, 59, 102, 0.35);
+}
+
+.verify-btn:disabled {
+    background: #9db3c8;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* spinner داخل الزر */
+.btn-spinner {
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgba(255, 255, 255, 0.35);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* منطقة إعادة الإرسال */
+.resend-area {
+    margin-top: 20px;
+}
+
+.countdown-text {
+    font-size: 13px;
+    color: #8a9ab0;
+    margin: 0;
+}
+
+.countdown-text strong {
+    color: #0d3b66;
+    font-weight: 700;
+}
+
+.resend-btn {
+    background: none;
+    border: none;
+    color: #1a6eb5;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Cairo', sans-serif;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.resend-btn:hover:not(:disabled) {
+    background: #e8f4ff;
+    color: #0d3b66;
+}
+
+.resend-btn:disabled {
+    color: #9db3c8;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .verify-card {
+        padding: 36px 24px;
+    }
+
+    .code-box {
+        width: 44px;
+        height: 52px;
+        font-size: 22px;
+    }
+}
+
+/* ======== شروط كلمة المرور في صفحة إعادة التعيين ======== */
+.verify-password-rules {
+    margin-top: 10px;
+    padding: 12px 14px;
+    background: #f4f8fd;
+    border-radius: 10px;
+    border: 1.5px solid #dde8f4;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    text-align: right;
+}
+
+.verify-password-rule {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Cairo', sans-serif;
+    transition: color 0.25s;
+}
+
+.verify-password-rule.passed {
+    color: #1a7a4a;
+}
+
+.verify-password-rule.failed {
+    color: #c0392b;
+}
+
+.verify-rule-icon {
+    font-size: 13px;
+    font-weight: 800;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.25s;
+}
+
+.verify-password-rule.passed .verify-rule-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.verify-password-rule.failed .verify-rule-icon {
+    background: #fee2e2;
+    color: #dc2626;
+}
