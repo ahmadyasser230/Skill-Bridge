@@ -71,7 +71,7 @@ const Welcome = () => {
                     textAlign: 'center',
                     fontSize: '36px',
                     marginBottom: '60px',
-                    color: 'white'
+                    color: 'black'
                 }}>
                     ماذا تقدم المنصة؟
                 </h2>
@@ -105,7 +105,7 @@ const Welcome = () => {
                         textAlign: 'center',
                         fontSize: '36px',
                         marginBottom: '60px',
-                        color: 'white'
+                        color: 'black'
                     }}>
                         كيف تعمل المنصة؟
                     </h2>
