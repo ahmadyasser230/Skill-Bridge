@@ -2,7 +2,7 @@
     "name": "gaza-students-platform-backend",
     "version": "1.0.0",
     "description": "Backend for Gaza Students Platform",
-    "main": "server.js",
+    "main": "Server.js",
     "scripts": {
         "start": "node Server.js",
         "dev": "nodemon Server.js",
@@ -23,8 +23,5 @@
     },
     "devDependencies": {
         "nodemon": "^3.0.1"
-    },
-    "scripts": {
-        "start": "node server.js"
     }
 }
