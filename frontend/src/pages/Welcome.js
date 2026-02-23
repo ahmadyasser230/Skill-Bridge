@@ -117,7 +117,7 @@ const Welcome = () => {
                                 color: 'white',
                                 width: '50px',
                                 height: '50px',
-                                borderRadius: '50%',
+                                borderRaسdius: '50%',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
