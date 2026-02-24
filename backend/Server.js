@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 const server = http.createServer(app);
 const io = socketIo(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://superb-mermaid-272bac.netlify.app",
         methods: ["GET", "POST"]
     }
 });
