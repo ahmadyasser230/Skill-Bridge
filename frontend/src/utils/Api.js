@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_API_URL || 'https://skill-bridge-gmup.onrender.com';
-
 const api = axios.create({
     baseURL: API_URL,
     headers: {
@@ -19,11 +18,11 @@ api.interceptors.request.use((config) => {
 });
 
 // Auth
-export const register = (userData) => api.post('/auth/register', userData);
-export const login = (credentials) => api.post('/auth/login', credentials);
-export const getCurrentUser = () => api.get('/auth/me');
-export const forgotPassword = (email) => api.post('/auth/forgot-password', { email });
-export const resetPassword = (data) => api.post('/auth/reset-password', data);
+export const register = (userData) => api.post('/api/auth/register', userData);
+export const login = (credentials) => api.post('/api/auth/login', credentials);
+export const getCurrentUser = () => api.get('/api/auth/me');
+export const forgotPassword = (email) => api.post('/api/auth/forgot-password', { email });
+export const resetPassword = (data) => api.post('/api/auth/reset-password', data);
 
 // Users
 export const getUserProfile = (userId) => api.get(`/users/profile/${userId}`);
