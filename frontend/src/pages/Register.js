@@ -37,10 +37,40 @@ const Register = () => {
 
     const allRulesPassed = passwordRules.every(r => r.test(formData.password));
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     setError('');
+    //     const userData = { name, email, password };
+    //     fetch(`${process.env.REACT_APP_API_URL}/api/auth/register`, {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify(userData)
+    //     })
+
+    //     if (!allRulesPassed) {
+    //         setError('كلمة المرور لا تستوفي المتطلبات المطلوبة');
+    //         setPasswordFocused(true);
+    //         return;
+    //     }
+
+    //     setLoading(true);
+    //     try {
+    //         const skills = formData.skills.split(',').map(s => s.trim()).filter(s => s);
+    //         const response = await register({ ...formData, skills });
+    //         navigate('/verify-email', {
+    //             state: { userId: response.data.userId, email: formData.email }
+    //         });
+    //     } catch (err) {
+    //         setError(err.response?.data?.message || 'حدث خطأ أثناء التسجيل');
+    //     } finally {
+    //         setLoading(false);
+    //     }
+    // };
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
 
+        // ✅ أولاً: تحقق من شروط كلمة المرور
         if (!allRulesPassed) {
             setError('كلمة المرور لا تستوفي المتطلبات المطلوبة');
             setPasswordFocused(true);
@@ -49,8 +79,21 @@ const Register = () => {
 
         setLoading(true);
         try {
-            const skills = formData.skills.split(',').map(s => s.trim()).filter(s => s);
-            const response = await register({ ...formData, skills });
+            // ✅ ثانياً: جمع البيانات من formData (هذا هو الحل)
+            const userData = {
+                name: formData.name,
+                email: formData.email,
+                password: formData.password,
+                studentId: formData.studentId,
+                university: formData.university,
+                major: formData.major,
+                skills: formData.skills.split(',').map(s => s.trim()).filter(s => s)
+            };
+
+            // ✅ ثالثاً: استخدم دالة register فقط (بدون fetch)
+            const response = await register(userData);
+
+            // ✅ رابعاً: التنقل بعد النجاح
             navigate('/verify-email', {
                 state: { userId: response.data.userId, email: formData.email }
             });
