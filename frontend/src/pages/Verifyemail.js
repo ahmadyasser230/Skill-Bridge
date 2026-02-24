@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
 import './Verifyemail.css';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://skill-bridge-gmup.onrender.com';
 
 const passwordRules = [
     { id: 'length', label: '8 أحرف على الأقل', test: p => p.length >= 8 },

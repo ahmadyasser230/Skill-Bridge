@@ -367,7 +367,7 @@ const CourseDetail = () => {
                                                 const rawUrl = selectedVideo.videoUrl || '';
                                                 // إصلاح روابط الفيديو المرفوعة — تحويلها لتشير للـ backend
                                                 const url = rawUrl.startsWith('/uploads/')
-                                                    ? `http://localhost:5000${rawUrl}`
+                                                    ? `https://skill-bridge-gmup.onrender.com${rawUrl}`
                                                     : rawUrl;
 
                                                 const isImage = url.match(/\.(png|jpe?g|gif|svg)(\?.*)?$/i);
