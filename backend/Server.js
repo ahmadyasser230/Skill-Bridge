@@ -15,11 +15,11 @@ const server = http.createServer(app);
 // ✅ تعريف خيارات CORS للـ HTTP
 const corsOptions = {
     origin: [
-        'https://superb-mermaid-272bac.netlify.app',
+        'https://thunderous-blini-a53d7e.netlify.app',  // 👈 الرابط الجديد هنا
+        'https://superb-mermaid-272bac.netlify.app',    // الرابط القديم (للأمان)
         'http://localhost:3000'
     ],
-    credentials: true,
-    optionsSuccessStatus: 200
+    credentials: true
 };
 
 // ✅ تطبيق CORS على كل طلبات HTTP
